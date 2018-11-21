@@ -1,4 +1,5 @@
-﻿using Core.Utils.Date;
+﻿using Core.Utils.Database;
+using Core.Utils.Date;
 using Core.Utils.Web;
 using LotoHelper.DataTypes.Collections;
 using System;
@@ -18,6 +19,8 @@ namespace LotoHelper.Models.DataControllers
     public class LotoResults
     {
         #region Fields
+        private const string DBNAME = "LotoHelper";
+
         private WebAccess _webAccess;
         private Tirage _tirage;
 
@@ -41,6 +44,14 @@ namespace LotoHelper.Models.DataControllers
 
         #region Methods - Private
         // TODO: Method that will save the data into the MongoDb.
+        private void SaveTirageInMongoDb(List<Tirage> _tirages)
+        {
+            if (string.IsNullOrEmpty(MongoAccess.Instance.DbName) ||
+                !MongoAccess.Instance.DbName.Equals(DBNAME))
+                MongoAccess.Instance.DbName = DBNAME;
+
+            MongoAccess.Instance.InsertListInMongoDb<Tirage>(_tirages);
+        }
 
         /// <summary>
         /// Get the source code of the web page given the results of [year]
@@ -173,6 +184,8 @@ namespace LotoHelper.Models.DataControllers
                 string sourceCode = this.GetSourceCodeForYear(i);
                 tirages.AddRange(this.GetTiragesFromSourceCode(sourceCode, i));
             }
+
+            this.SaveTirageInMongoDb(tirages);
 
             return tirages;
         }
