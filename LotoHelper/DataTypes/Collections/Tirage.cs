@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Utils.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,6 +63,10 @@ namespace LotoHelper.DataTypes.Collections
         #endregion
 
         #region Methods - Public
+        public void InsertInMongoDb()
+        {
+            MongoAccess.Instance.InsertElementInMongoDb<Tirage>(this);
+        }
         #endregion
     }
 }

@@ -22,7 +22,6 @@ namespace LotoHelper.Models.DataControllers
         private const string DBNAME = "LotoHelper";
 
         private WebAccess _webAccess;
-        private Tirage _tirage;
 
         private int _startingYear = 2004;   // The euromillions results start at the year 2004.
         private int _startingTuesdayYear = 2011;    // The euromillions tuesday draw start at the year 2011.
@@ -44,7 +43,7 @@ namespace LotoHelper.Models.DataControllers
 
         #region Methods - Private
         // TODO: Method that will save the data into the MongoDb.
-        private void SaveTirageInMongoDb(List<Tirage> _tirages)
+        private void SaveTiragesInMongoDb(List<Tirage> _tirages)
         {
             if (string.IsNullOrEmpty(MongoAccess.Instance.DbName) ||
                 !MongoAccess.Instance.DbName.Equals(DBNAME))
@@ -185,9 +184,17 @@ namespace LotoHelper.Models.DataControllers
                 tirages.AddRange(this.GetTiragesFromSourceCode(sourceCode, i));
             }
 
-            this.SaveTirageInMongoDb(tirages);
+            this.SaveTiragesInMongoDb(tirages);
 
             return tirages;
+        }
+
+        public void SaveTirageInMongoDb(Tirage _tirage)
+        {
+            if (string.IsNullOrEmpty(MongoAccess.Instance.DbName) || !MongoAccess.Instance.DbName.Equals(DBNAME))
+                MongoAccess.Instance.DbName = DBNAME;
+
+            _tirage.InsertInMongoDb();
         }
         #endregion
     }

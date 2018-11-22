@@ -14,7 +14,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="25" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -38,8 +38,14 @@
             Grid.Column="1"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Command="{Binding MyCommand}"
-            Content="Button" />
+            Command="{Binding GetResultsCommand}"
+            Content="Get Results" />
+
+        <ProgressBar
+            Grid.Row="3"
+            Grid.Column="1"
+            Visibility="{Binding ProgressVisibility}"
+            Value="{Binding CurrentProgress, Mode=OneWay}" />
 
     </Grid>
 </Page>

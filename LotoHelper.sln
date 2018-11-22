@@ -7,19 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotoHelper", "LotoHelper\Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\Core\Core\Core.csproj", "{C9021028-AB38-49C2-999C-79B1EF59476C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Driver.Core", "..\..\Databases\mongodb-csharp-master\src\MongoDB.Driver.Core\MongoDB.Driver.Core.csproj", "{DA56482A-5D8F-41E0-85E6-1F22B310F91B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Driver", "..\..\Databases\mongodb-csharp-master\src\MongoDB.Driver\MongoDB.Driver.csproj", "{AE5166CD-76B0-4911-BD80-CED9521F37A1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalProjects", "ExternalProjects", "{49F12672-E29A-4EF2-8310-285A98A162C1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB.Driver.Core.Dotnet", "..\..\Databases\mongodb-csharp-master\src\MongoDB.Driver.Core.Dotnet\MongoDB.Driver.Core.Dotnet.csproj", "{7D3C14E8-ED6A-4D3A-A927-C0ABAE5B7112}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Bson", "..\..\Databases\mongodb-csharp-master\src\MongoDB.Bson\MongoDB.Bson.csproj", "{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB.Bson.Dotnet", "..\..\Databases\mongodb-csharp-master\src\MongoDB.Bson.Dotnet\MongoDB.Bson.Dotnet.csproj", "{8F107A1F-D705-4CE2-884B-7CB8171E947A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB.Driver.Dotnet", "..\..\Databases\mongodb-csharp-master\src\MongoDB.Driver.Dotnet\MongoDB.Driver.Dotnet.csproj", "{397CFB25-34BF-40D5-8E32-D02316C65A73}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB.Driver.GridFS.Dotnet", "..\..\Databases\mongodb-csharp-master\src\MongoDB.Driver.GridFS.Dotnet\MongoDB.Driver.GridFS.Dotnet.csproj", "{D2243C1B-E7A3-402B-A18A-07A203B0CB60}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB.Driver.Legacy.Dotnet", "..\..\Databases\mongodb-csharp-master\src\MongoDB.Driver.Legacy.Dotnet\MongoDB.Driver.Legacy.Dotnet.csproj", "{098A8CE4-F5B4-43AC-A7D4-0A6364580B11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,22 +33,10 @@ Global
 		{C9021028-AB38-49C2-999C-79B1EF59476C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9021028-AB38-49C2-999C-79B1EF59476C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9021028-AB38-49C2-999C-79B1EF59476C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA56482A-5D8F-41E0-85E6-1F22B310F91B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA56482A-5D8F-41E0-85E6-1F22B310F91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA56482A-5D8F-41E0-85E6-1F22B310F91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA56482A-5D8F-41E0-85E6-1F22B310F91B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE5166CD-76B0-4911-BD80-CED9521F37A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE5166CD-76B0-4911-BD80-CED9521F37A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE5166CD-76B0-4911-BD80-CED9521F37A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE5166CD-76B0-4911-BD80-CED9521F37A1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D3C14E8-ED6A-4D3A-A927-C0ABAE5B7112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7D3C14E8-ED6A-4D3A-A927-C0ABAE5B7112}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D3C14E8-ED6A-4D3A-A927-C0ABAE5B7112}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D3C14E8-ED6A-4D3A-A927-C0ABAE5B7112}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8F107A1F-D705-4CE2-884B-7CB8171E947A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8F107A1F-D705-4CE2-884B-7CB8171E947A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F107A1F-D705-4CE2-884B-7CB8171E947A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -59,17 +45,24 @@ Global
 		{397CFB25-34BF-40D5-8E32-D02316C65A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{397CFB25-34BF-40D5-8E32-D02316C65A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{397CFB25-34BF-40D5-8E32-D02316C65A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2243C1B-E7A3-402B-A18A-07A203B0CB60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2243C1B-E7A3-402B-A18A-07A203B0CB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2243C1B-E7A3-402B-A18A-07A203B0CB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2243C1B-E7A3-402B-A18A-07A203B0CB60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{098A8CE4-F5B4-43AC-A7D4-0A6364580B11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{098A8CE4-F5B4-43AC-A7D4-0A6364580B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{098A8CE4-F5B4-43AC-A7D4-0A6364580B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{098A8CE4-F5B4-43AC-A7D4-0A6364580B11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{DA56482A-5D8F-41E0-85E6-1F22B310F91B} = {49F12672-E29A-4EF2-8310-285A98A162C1}
-		{AE5166CD-76B0-4911-BD80-CED9521F37A1} = {49F12672-E29A-4EF2-8310-285A98A162C1}
 		{7D3C14E8-ED6A-4D3A-A927-C0ABAE5B7112} = {49F12672-E29A-4EF2-8310-285A98A162C1}
-		{0E9A3A2A-49CD-4F6C-847C-DC79B4B65CE6} = {49F12672-E29A-4EF2-8310-285A98A162C1}
 		{8F107A1F-D705-4CE2-884B-7CB8171E947A} = {49F12672-E29A-4EF2-8310-285A98A162C1}
 		{397CFB25-34BF-40D5-8E32-D02316C65A73} = {49F12672-E29A-4EF2-8310-285A98A162C1}
+		{D2243C1B-E7A3-402B-A18A-07A203B0CB60} = {49F12672-E29A-4EF2-8310-285A98A162C1}
+		{098A8CE4-F5B4-43AC-A7D4-0A6364580B11} = {49F12672-E29A-4EF2-8310-285A98A162C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {87DC9D8C-ACDC-4CEC-A731-46D667B3B734}
